@@ -1,0 +1,46 @@
+INSERTION SORT
+
+İlk rakam ikinci rakam kıyaslanır. => [22,27,|16,2,18,6] 
+22 sayısı 27 den büyük olduğu için değişiklik olmaz. => [22,27,|16,2,18,6]
+
+Yanındaki ücüncü rakamı da (16) sıralamaya dahil eder. => [22,27,16,|2,18,6] 
+16 sayısı 27 den küçük olduğu için 27 nin soluna gelir. => [22,16,27,|2,18,6]
+16 sayısı 22 den küçük olduğu için 22 nin soluna gelir. => [16,22,27,|2,18,6]
+
+Yanındaki dördüncü rakamı da (2) sıralamaya dahil eder. => [16,22,27,2,|18,6] 
+2 sayısı 27, dan küçük olduğu için 27 nın soluna gelir. => [16,22,2,27,|18,6]
+2 sayısı 22, den küçük olduğu için 22 nın soluna gelir. => [16,2,22,27,|18,6]
+2 sayısı 16, dan küçük olduğu için 16 nın soluna gelir ve solunda rakam olmadığı için en solda kalır. => [2,16,22,27,|18,6]
+
+Yanındaki beşinci rakamı da (18) sıralamaya dahil eder. => [2,16,22,27,18,|6]
+18 sayısı 27,den küçük olduğu için 27 nin soluna gelir. => [2,16,22,18,27,|6]
+18 sayısı 22,den küçük olduğu için 22 nin soluna gelir. => [2,16,18,22,27,|6]
+
+
+Yanındaki altıncı rakamı da (6) sıralamaya dahil eder. => [2,16,18,22,27,6|]
+6 sayısı 27 dan küçük olduğu için 26 nin soluna gelir. => [2,16,18,22,6,27|]
+6 sayısı 22 dan küçük olduğu için 22 nin soluna gelir. => [2,16,18,6,22,27|]
+6 sayısı 18 dan küçük olduğu için 18 nin soluna gelir. => [2,16,6,18,22,27|]
+6 sayısı 16 dan küçük olduğu için 16 nin soluna gelir. => [2,6,16,18,22,27|]
+
+18 Sayısı avarage Case kapsamına girer
+θ (n2)
+
+
+
+SELECTİON SORT PROJESi
+İlk elemandan başlanarak en küçük eleman bulununcaya kadar liste içerisindeki tüm elemalar dolaşılır.
+[22,27,16,2,18,6]
+Bulunan en küçük eleman baştaki elemanla yer değiştirir.Bu sayede hafızada ekstra yer kaplamamış olur.
+ [2,27,16,22,18,6]
+Aynı işlemler sırasıyla tüm elemanlar üzerinde gerçekleştirilir.Sıraya konulmuş elemanlara bakılmaz.
+[2,6,16,22,18,27] 
+[2,6,16,18,22,27]
+
+
+Big-O gösterimi
+(n^2 + n)/n formülü domine eden eleman Big-O notation olur.
+Big-O notation = θ (n2)
+
+Time Complexity: Dizi sıralandıktan sonra 18 sayısının case'i
+Average case: Aradığımız sayının ortada olması 
